@@ -65,7 +65,7 @@ export default function Home() {
               <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, lineHeight: 1.05, marginBottom: "28px" }}>
                 <span style={{ display: "block", fontSize: "clamp(52px, 8vw, 110px)", background: "linear-gradient(135deg, #888 0%, #e8e8e8 40%, #b0b0b0 60%, #fff 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>After</span>
                 <span style={{ display: "block", fontSize: "clamp(52px, 8vw, 110px)", background: "linear-gradient(135deg, #888 0%, #e8e8e8 40%, #b0b0b0 60%, #fff 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Hours</span>
-                <span style={{ display: "block", fontSize: "clamp(18px, 2.5vw, 28px)", fontStyle: "italic", color: "#666", letterSpacing: "0.15em", marginTop: "8px" }}>Vodka</span>
+                <span style={{ display: "block", textAlign: "left", fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 300, fontStyle: "normal", marginTop: "8px", background: "linear-gradient(135deg, #888 0%, #e8e8e8 40%, #b0b0b0 60%, #fff 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Vodka</span>
               </h1>
 
               <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(16px, 1.5vw, 20px)", lineHeight: 1.75, color: "#888", maxWidth: "480px", marginBottom: "40px" }}>
