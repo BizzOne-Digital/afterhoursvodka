@@ -11,11 +11,14 @@ export default function Footer() {
           <div>
             <div style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
               <div style={{ width: "68px", height: "68px", position: "relative" }}>
-                <Image src="/logo1.png" alt="After Hours" fill style={{ objectFit: "contain" }} />
+                <Image src="/ah-logo-new.png" alt="After Hours" fill style={{ objectFit: "contain" }} />
               </div>
             </div>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#777", marginBottom: "12px" }}>
+              Northern Quality. You Can Taste and Trust.
+            </p>
             <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "15px", lineHeight: 1.8, color: "#555", fontStyle: "italic" }}>
-              Canada's premium black bottle vodka. Crafted with glacier water from the Rocky Mountains.
+              Canada's premium black bottle vodka. Sugar cane distilled, gluten-free, and crafted with glacier water from the Rocky Mountains.
             </p>
             <div style={{ display: "flex", gap: "16px", marginTop: "24px" }}>
               {/* Instagram */}

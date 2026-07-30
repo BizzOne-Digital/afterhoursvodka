@@ -17,6 +17,9 @@ export default function Services() {
           <div>
             <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "9px", fontWeight: 700, letterSpacing: "0.4em", color: "#555", textTransform: "uppercase", display: "block", marginBottom: "20px" }}>For Professionals</span>
             <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(44px, 7vw, 88px)", fontWeight: 300, color: "#d4d4d4" }}>Services</h1>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase", color: "#777", marginTop: "24px" }}>
+              Northern Quality. You Can Taste and Trust.
+            </p>
           </div>
         </div>
       </section>
@@ -36,7 +39,7 @@ export default function Services() {
                 <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "40px", fontWeight: 600, color: "#d4d4d4" }}>$47.99</span>
               </div>
               <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "18px", lineHeight: 1.85, color: "#666", marginBottom: "32px" }}>
-                Canada's premium black bottle vodka. Crafted with glacier water from the Rocky Mountains. Perfect for restaurants, bars, events, and personal collections.
+                Canada's premium black bottle vodka. Sugar cane distilled, naturally gluten-free, and crafted with glacier water from the Rocky Mountains. Perfect for restaurants, bars, events, and personal collections.
               </p>
               <div style={{ background: "#0f0f0f", border: "1px solid #1e1e1e", padding: "20px 28px", display: "inline-block", marginBottom: "32px" }}>
                 <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#666" }}>
@@ -49,7 +52,7 @@ export default function Services() {
             </div>
             <div style={{ textAlign: "center" }} className="service-bottle">
               <div style={{ position: "relative", width: "180px", height: "320px" }}>
-                <Image src="/product.png" alt="After Hours" fill style={{ objectFit: "contain" }} />
+                <Image src="/bottle-real-front.png" alt="After Hours" fill style={{ objectFit: "contain" }} />
               </div>
             </div>
           </div>

@@ -42,7 +42,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="navbar-logo" style={{ display: "flex", alignItems: "center", textDecoration: "none", marginLeft: "100px" }}>
             <div style={{ width: "68px", height: "68px", position: "relative" }}>
-              <Image src="/logo1.png" alt="After Hours" fill style={{ objectFit: "contain" }} />
+              <Image src="/ah-logo-new.png" alt="After Hours" fill style={{ objectFit: "contain" }} />
             </div>
           </Link>
 

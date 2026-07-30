@@ -53,7 +53,7 @@ export default function Home() {
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "300px", background: "linear-gradient(to top, #000, transparent)", zIndex: 2 }} />
 
         {/* Content */}
-        <div style={{ position: "relative", zIndex: 3, height: "100%", display: "flex", alignItems: "center", maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+        <div className="hero-content" style={{ position: "relative", zIndex: 3, height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch", justifyContent: "center", maxWidth: "1400px", margin: "0 auto", padding: "clamp(110px, 16vh, 160px) 40px 0" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "60px", alignItems: "center", width: "100%" }}>
             {/* Left text */}
             <div style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(30px)", transition: "all 1s ease 0.3s" }}>
@@ -68,8 +68,12 @@ export default function Home() {
                 <span style={{ display: "block", textAlign: "left", fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 300, fontStyle: "normal", marginTop: "8px", background: "linear-gradient(135deg, #888 0%, #e8e8e8 40%, #b0b0b0 60%, #fff 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Vodka</span>
               </h1>
 
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#aaa", marginBottom: "16px" }}>
+                Northern Quality. You Can Taste and Trust.
+              </p>
+
               <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(16px, 1.5vw, 20px)", lineHeight: 1.75, color: "#888", maxWidth: "480px", marginBottom: "40px" }}>
-                Crafted with glacier water from Canada's Rocky Mountains for an exceptionally smooth finish.
+                Sugar cane distilled and naturally gluten-free, crafted with glacier water from Canada's Rocky Mountains for an exceptionally smooth finish.
               </p>
 
               <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
@@ -181,6 +185,8 @@ export default function Home() {
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               {[
                 { icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.5"><path d="M12 2C12 2 4 9 4 14a8 8 0 0 0 16 0c0-5-8-12-8-12z"/></svg>, text: "Canadian Glacier Water" },
+                { icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.5"><path d="M12 2l2.5 6.5L21 9l-5 5 1.5 7L12 17.5 6.5 21 8 14 3 9l6.5-.5z"/></svg>, text: "Sugar Cane Distilled" },
+                { icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.5"><circle cx="12" cy="12" r="9"/><line x1="6" y1="6" x2="18" y2="18"/></svg>, text: "Naturally Gluten-Free" },
                 { icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>, text: "Premium Craft Distillation" },
                 { icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>, text: "Exceptionally Smooth Finish" },
               ].map((f, i) => (
@@ -222,7 +228,7 @@ export default function Home() {
           <div className="product-card-grid reveal-scale hover-lift" style={{ maxWidth: "900px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0", border: "1px solid #1a1a1a" }}>
             <div style={{ position: "relative", minHeight: "500px", height: "100%", background: "#080808" }}>
               <Image
-                src="/product.png"
+                src="/bottle-real-front.jpg"
                 alt="After Hours Vodka"
                 fill
                 style={{ objectFit: "cover" }}
@@ -274,6 +280,37 @@ export default function Home() {
                 <div style={{ position: "absolute", bottom: "32px", left: "32px", right: "32px" }}>
                   <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "28px", fontWeight: 300, color: "#d4d4d4", marginBottom: "8px" }}>{item.label}</h3>
                   <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "14px", color: "#888", fontStyle: "italic" }}>{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SIGNATURE SERVES ── */}
+      <section style={{ background: "#000", padding: "100px 40px" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
+          <div className="reveal" style={{ textAlign: "center", marginBottom: "56px" }}>
+            <div className="luxury-divider" style={{ marginBottom: "24px" }}>
+              <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "9px", fontWeight: 700, letterSpacing: "0.4em", color: "#555", textTransform: "uppercase" }}>Crafted Moments</span>
+            </div>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(32px, 4vw, 52px)", fontWeight: 300, color: "#d4d4d4" }}>Signature Serves</h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "24px" }}>
+            {[
+              { img: "/lom.png", name: "Northern Lights", desc: "Crisp. Refreshing. Unforgettable." },
+              { img: "/midnight.png", name: "Midnight Maple", desc: "A true Canadian original." },
+              { img: "/cocktail-espresso.png", name: "After Hours Espresso", desc: "Refined. Smooth. Timeless." },
+              { img: "/cocktail-mule.png", name: "Rocky Mountain Mule", desc: "Bold. Refreshing. Canadian." },
+              { img: "/cocktail-collins.png", name: "Black Label Collins", desc: "Crisp. Elegant. Effortless." },
+            ].map((c, i) => (
+              <div key={i} className="reveal-scale hover-lift" style={{ background: "#0a0a0a", border: "1px solid #1a1a1a", ["--reveal-delay" as string]: `${i * 0.1}s` }}>
+                <div className="hover-zoom" style={{ position: "relative", height: "260px" }}>
+                  <Image src={c.img} alt={c.name} fill style={{ objectFit: "cover" }} />
+                </div>
+                <div style={{ padding: "24px" }}>
+                  <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "20px", fontWeight: 400, color: "#d4d4d4", marginBottom: "6px" }}>{c.name}</h3>
+                  <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "14px", color: "#777", fontStyle: "italic" }}>{c.desc}</p>
                 </div>
               </div>
             ))}

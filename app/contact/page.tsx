@@ -47,6 +47,9 @@ export default function Contact() {
           <div>
             <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "9px", fontWeight: 700, letterSpacing: "0.4em", color: "#555", textTransform: "uppercase", display: "block", marginBottom: "20px" }}>Let's Connect</span>
             <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(44px, 7vw, 88px)", fontWeight: 300, color: "#d4d4d4" }}>Contact</h1>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase", color: "#777", marginTop: "24px" }}>
+              Northern Quality. You Can Taste and Trust.
+            </p>
           </div>
         </div>
       </section>
