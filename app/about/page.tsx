@@ -46,7 +46,7 @@ export default function About() {
               </p>
             </div>
             <div className="reveal-right hover-zoom" style={{ position: "relative", height: "600px" }}>
-              <Image src="/aboutpp.png" alt="Vodka craftsmanship" fill style={{ objectFit: "cover" }} />
+              <Image src="/aboutpagepic.jpg" alt="Vodka craftsmanship" fill style={{ objectFit: "cover" }} />
               <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(0,0,0,0.2), transparent)" }} />
             </div>
           </div>

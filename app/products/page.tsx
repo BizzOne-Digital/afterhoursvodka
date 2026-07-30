@@ -27,7 +27,7 @@ export default function Products() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center", border: "1px solid #1a1a1a" }} className="product-main-grid">
             {/* Image */}
             <div className="reveal-left hover-zoom" style={{ position: "relative", height: "640px", background: "#070707", overflow: "hidden" }}>
-              <Image src="/bottle-real-front.png" alt="After Hours Vodka" fill style={{ objectFit: "cover" }} />
+              <Image src="/bottle-real-front.jpg" alt="After Hours Vodka" fill style={{ objectFit: "cover" }} />
               {/* Sale badge */}
               <div style={{ position: "absolute", top: "24px", right: "24px", background: "#0a0a0a", border: "1px solid #2a2a2a", padding: "10px 16px" }}>
                 <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "9px", fontWeight: 700, letterSpacing: "0.2em", color: "#888", textTransform: "uppercase" }}>Limited Offer</span>

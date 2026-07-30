@@ -52,7 +52,7 @@ export default function Services() {
             </div>
             <div style={{ textAlign: "center" }} className="service-bottle">
               <div style={{ position: "relative", width: "180px", height: "320px" }}>
-                <Image src="/bottle-real-front.png" alt="After Hours" fill style={{ objectFit: "contain" }} />
+                <Image src="/bottle-real-front.jpg" alt="After Hours" fill style={{ objectFit: "contain" }} />
               </div>
             </div>
           </div>
