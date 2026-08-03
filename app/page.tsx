@@ -31,7 +31,7 @@ export default function Home() {
         {/* BG image with parallax */}
         <div ref={heroRef} style={{ position: "absolute", inset: 0, zIndex: 0 }}>
           <Image
-            src="/hero.png"
+            src="/newhero.png"
             alt="Mountain glacier backdrop"
             fill
             className="desktop-hero-img"
@@ -154,50 +154,42 @@ export default function Home() {
 
       {/* ── CRAFT SECTION ── */}
       <section style={{ background: "#0a0a0a" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1.1fr 1fr", alignItems: "stretch" }} className="craft-grid">
+        <div style={{ display: "grid", gridTemplateColumns: "0.9fr 1fr", alignItems: "stretch" }} className="craft-grid">
           {/* Image - full bleed, 0px from edges */}
-          <div className="craft-image reveal-left" style={{ position: "relative", minHeight: "640px" }}>
+          <div className="craft-image reveal-left" style={{ position: "relative", minHeight: "560px" }}>
             <Image
-              src="/abouth.png"
-              alt="Glacier water craftsmanship"
+              src="/new1.png"
+              alt="After Hours Premium Vodka bottle"
               fill
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "cover", objectPosition: "left center" }}
             />
           </div>
 
           {/* Text */}
-          <div className="reveal-right" style={{ padding: "100px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
-              <div style={{ height: "1px", width: "40px", background: "#b8944f" }} />
-              <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "9px", fontWeight: 700, letterSpacing: "0.4em", textTransform: "uppercase", color: "#b8944f" }}>The Craft</span>
-            </div>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(36px, 4vw, 56px)", fontWeight: 300, lineHeight: 1.1, color: "#f0f0f0", marginBottom: "28px" }}>
-              Purity Born<br />
-              <em style={{ fontStyle: "italic", color: "#b8944f" }}>from the Mountains</em>
+          <div className="reveal-right" style={{ padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+            <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.35em", textTransform: "uppercase", color: "#b8944f", marginBottom: "20px" }}>The Craftsmanship</span>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(26px, 3vw, 38px)", fontWeight: 400, lineHeight: 1.3, color: "#f0f0f0", marginBottom: "40px", textTransform: "uppercase" }}>
+              Exceptional by Nature.<br />Premium by Choice.
             </h2>
-            <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "18px", lineHeight: 1.85, color: "#999", marginBottom: "20px" }}>
-              Every bottle of After Hours is crafted using glacier water sourced from Canada's Rocky Mountains — pristine, mineral-rich, and impossibly smooth. This is the foundation of everything we do.
-            </p>
-            <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "17px", lineHeight: 1.85, color: "#777", marginBottom: "40px" }}>
-              From the raw ingredient to the final pour, our process is deliberate, unhurried, and uncompromising — delivering a vodka that is exceptional without effort.
-            </p>
-            {/* Feature list */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+
+            {/* Feature grid */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px", marginBottom: "40px" }} className="craft-feature-grid">
               {[
-                { icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.5"><path d="M12 2C12 2 4 9 4 14a8 8 0 0 0 16 0c0-5-8-12-8-12z"/></svg>, text: "Canadian Glacier Water" },
-                { icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.5"><path d="M12 2l2.5 6.5L21 9l-5 5 1.5 7L12 17.5 6.5 21 8 14 3 9l6.5-.5z"/></svg>, text: "Sugar Cane Distilled" },
-                { icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.5"><circle cx="12" cy="12" r="9"/><line x1="6" y1="6" x2="18" y2="18"/></svg>, text: "Naturally Gluten-Free" },
-                { icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>, text: "Premium Craft Distillation" },
-                { icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>, text: "Exceptionally Smooth Finish" },
+                { icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.2"><path d="M12 2C12 2 4 9 4 14a8 8 0 0 0 16 0c0-5-8-12-8-12z"/></svg>, title: "Premium Ingredients", desc: "Made from the finest sugar cane." },
+                { icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.2"><path d="M12 2l9 18H3z"/><path d="M8 14l4-8 4 8"/></svg>, title: "Glacier Filtered", desc: "Infused with pure Canadian glacier water." },
+                { icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.2"><path d="M12 2s5 5.5 5 10a5 5 0 0 1-10 0c0-4.5 5-10 5-10z"/></svg>, title: "Ultra Smooth", desc: "Four times distilled for unmatched smoothness." },
+                { icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.2"><path d="M12 2s-6 4-6 9a6 6 0 0 0 12 0c0-5-6-9-6-9z"/><path d="M12 11v10"/></svg>, title: "Crafted in Canada", desc: "Proudly distilled and bottled in Canada." },
               ].map((f, i) => (
-                <div key={i} style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-                  <span>{f.icon}</span>
-                  <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "11px", fontWeight: 500, letterSpacing: "0.15em", textTransform: "uppercase", color: "#999" }}>{f.text}</span>
+                <div key={i} style={{ borderLeft: i === 0 ? "none" : "1px solid #222", paddingLeft: i === 0 ? "0" : "20px" }}>
+                  <div style={{ marginBottom: "12px" }}>{f.icon}</div>
+                  <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "9px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#d4d4d4", marginBottom: "8px", lineHeight: 1.4 }}>{f.title}</div>
+                  <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "13px", color: "#777", lineHeight: 1.5 }}>{f.desc}</div>
                 </div>
               ))}
             </div>
-            <div style={{ marginTop: "48px" }}>
-              <Link href="/about" className="hover-glow" style={{ display: "inline-block", padding: "16px 36px", border: "1px solid #b8944f", color: "#b8944f", fontFamily: "'Montserrat', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase", textDecoration: "none", textAlign: "center" }}>Learn More</Link>
+
+            <div>
+              <Link href="/about" className="hover-glow" style={{ display: "inline-block", padding: "16px 36px", border: "1px solid #b8944f", color: "#b8944f", fontFamily: "'Montserrat', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase", textDecoration: "none", textAlign: "center" }}>Explore the Bottle</Link>
             </div>
           </div>
         </div>
@@ -205,6 +197,8 @@ export default function Home() {
           @media (max-width: 768px) {
             .craft-grid { grid-template-columns: 1fr !important; }
             .craft-image { min-height: 400px !important; }
+            .craft-feature-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .craft-feature-grid > div { border-left: none !important; padding-left: 0 !important; }
           }
         `}</style>
       </section>

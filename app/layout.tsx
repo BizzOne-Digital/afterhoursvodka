@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import AgeGate from "@/components/AgeGate";
 
 export const metadata: Metadata = {
   title: "After Hours Vodka | Canada's Premium Black Bottle Vodka",
@@ -30,6 +31,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <ScrollReveal />
+        <AgeGate />
       </body>
     </html>
   );
