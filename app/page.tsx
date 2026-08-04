@@ -39,7 +39,7 @@ export default function Home() {
             priority
           />
           <Image
-            src="/mobile-hero.png"
+            src="/newmobile.png"
             alt="Mountain glacier backdrop"
             fill
             className="mobile-hero-img"
@@ -261,9 +261,9 @@ export default function Home() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1px", border: "1px solid #1a1a1a", overflow: "hidden" }}>
             {[
-              { img: "https://images.unsplash.com/photo-1699730164892-d7c433524ff3?q=80", label: "Celebrations", desc: "Perfect for milestones that deserve to be remembered." },
-              { img: "https://images.unsplash.com/photo-1629223404788-db15f97f9cec?q=80", label: "Entertaining", desc: "The bottle your guests will notice before you even pour." },
-              { img: "https://images.unsplash.com/photo-1557861755-116b854811e2?q=80", label: "After Hours", desc: "When the night calls for something elevated." },
+              { img: "/celeb.jpeg", label: "Celebrations", desc: "Perfect for milestones that deserve to be remembered." },
+              { img: "/enter.jpeg", label: "Entertaining", desc: "The bottle your guests will notice before you even pour." },
+              { img: "/afterhour.jpeg", label: "After Hours", desc: "When the night calls for something elevated." },
             ].map((item, i) => (
               <div key={i} className="reveal-scale" style={{ position: "relative", height: "380px", overflow: "hidden", cursor: "pointer", ["--reveal-delay" as string]: `${i * 0.15}s` }}
                 onMouseEnter={e => { const img = e.currentTarget.querySelector('.card-img') as HTMLElement; if (img) img.style.transform = "scale(1.08)"; }}
