@@ -27,7 +27,7 @@ export default function Products() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center", border: "1px solid #1a1a1a" }} className="product-main-grid">
             {/* Image */}
             <div className="reveal-left hover-zoom" style={{ position: "relative", height: "640px", background: "#070707", overflow: "hidden" }}>
-              <Image src="/bottle-real-front.jpg" alt="After Hours Vodka" fill style={{ objectFit: "cover" }} />
+              <Image src="/pro.jpeg" alt="After Hours Vodka" fill style={{ objectFit: "cover" }} />
               {/* Sale badge */}
               <div style={{ position: "absolute", top: "24px", right: "24px", background: "#0a0a0a", border: "1px solid #2a2a2a", padding: "10px 16px" }}>
                 <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "9px", fontWeight: 700, letterSpacing: "0.2em", color: "#888", textTransform: "uppercase" }}>Limited Offer</span>
@@ -52,7 +52,7 @@ export default function Products() {
                 Northern Quality. You Can Taste and Trust.
               </p>
               <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "17px", lineHeight: 1.85, color: "#666", marginBottom: "32px" }}>
-                Canada's premium black bottle vodka. Sugar cane distilled, naturally gluten-free, and crafted with glacier water from the Rocky Mountains for an exceptionally smooth finish. A spirit as unforgettable on the table as it is in the glass.
+                Canada's premium black bottle vodka. Sugar cane distilled, made with gluten-free ingredients, and crafted with glacier water from the Rocky Mountains for an exceptionally smooth finish. A spirit as unforgettable on the table as it is in the glass.
               </p>
 
               {/* Features */}
@@ -63,7 +63,7 @@ export default function Products() {
                   { icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>, label: "Premium Grade" },
                   { icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>, label: "Smooth Finish" },
                   { icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2l2.5 6.5L21 9l-5 5 1.5 7L12 17.5 6.5 21 8 14 3 9l6.5-.5z"/></svg>, label: "Sugar Cane Distilled" },
-                  { icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="9"/><line x1="6" y1="6" x2="18" y2="18"/></svg>, label: "Gluten-Free" },
+                  { icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="9"/><line x1="6" y1="6" x2="18" y2="18"/></svg>, label: "Gluten-Free Ingredients" },
                 ].map((f, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "center", gap: "10px", color: "#555" }}>
                     {f.icon}

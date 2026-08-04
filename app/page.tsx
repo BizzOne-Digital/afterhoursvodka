@@ -31,7 +31,7 @@ export default function Home() {
         {/* BG image with parallax */}
         <div ref={heroRef} style={{ position: "absolute", inset: 0, zIndex: 0 }}>
           <Image
-            src="/newhero.png"
+            src="/hero.png"
             alt="Mountain glacier backdrop"
             fill
             className="desktop-hero-img"
@@ -39,7 +39,7 @@ export default function Home() {
             priority
           />
           <Image
-            src="/newmobile.png"
+            src="/mobile-hero.png"
             alt="Mountain glacier backdrop"
             fill
             className="mobile-hero-img"
@@ -73,7 +73,7 @@ export default function Home() {
               </p>
 
               <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(16px, 1.5vw, 20px)", lineHeight: 1.75, color: "#888", maxWidth: "480px", marginBottom: "40px" }}>
-                Sugar cane distilled and naturally gluten-free, crafted with glacier water from Canada's Rocky Mountains for an exceptionally smooth finish.
+                Sugar cane distilled and made with gluten-free ingredients, crafted with glacier water from Canada's Rocky Mountains for an exceptionally smooth finish.
               </p>
 
               <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
@@ -222,7 +222,7 @@ export default function Home() {
           <div className="product-card-grid reveal-scale hover-lift" style={{ maxWidth: "900px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0", border: "1px solid #1a1a1a" }}>
             <div style={{ position: "relative", minHeight: "500px", height: "100%", background: "#080808" }}>
               <Image
-                src="/bottle-real-front.jpg"
+                src="/pro.jpeg"
                 alt="After Hours Vodka"
                 fill
                 style={{ objectFit: "cover" }}
@@ -292,11 +292,11 @@ export default function Home() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "24px" }}>
             {[
-              { img: "/lom.png", name: "Northern Lights", desc: "Crisp. Refreshing. Unforgettable." },
-              { img: "/midnight.png", name: "Midnight Maple", desc: "A true Canadian original." },
-              { img: "/cocktail-espresso.png", name: "After Hours Espresso", desc: "Refined. Smooth. Timeless." },
-              { img: "/cocktail-mule.png", name: "Rocky Mountain Mule", desc: "Bold. Refreshing. Canadian." },
-              { img: "/cocktail-collins.png", name: "Black Label Collins", desc: "Crisp. Elegant. Effortless." },
+              { img: "/lom.png", name: "Northern Lights", desc: "Crisp. Refreshing. Unforgettable.", ingredients: ["2 oz After Hours Premium Vodka", "4 oz premium lemonade", "1 oz sparkling water", "Fresh lemon wedge", "Ice"] },
+              { img: "/midnight.png", name: "Midnight Maple", desc: "A true Canadian original.", ingredients: ["2 oz After Hours Premium Vodka", "½ oz pure Canadian maple syrup", "2 dashes Angostura bitters", "Orange peel", "Ice"] },
+              { img: "/cocktail-espresso.png", name: "After Hours Espresso", desc: "Refined. Smooth. Timeless.", ingredients: ["2 oz After Hours Premium Vodka", "1 oz espresso", "½ oz coffee liqueur", "½ oz simple syrup", "3 coffee beans (garnish)", "Ice"] },
+              { img: "/cocktail-mule.png", name: "Rocky Mountain Mule", desc: "Bold. Refreshing. Canadian.", ingredients: ["2 oz After Hours Premium Vodka", "½ oz fresh lime juice", "4 oz ginger beer", "Lime wheel", "Fresh mint"] },
+              { img: "/cocktail-collins.png", name: "Black Label Collins", desc: "Crisp. Elegant. Effortless.", ingredients: ["2 oz After Hours Premium Vodka", "1 oz fresh lemon juice", "½ oz simple syrup", "Soda water", "Lemon wheel"] },
             ].map((c, i) => (
               <div key={i} className="reveal-scale hover-lift" style={{ background: "#0a0a0a", border: "1px solid #1a1a1a", ["--reveal-delay" as string]: `${i * 0.1}s` }}>
                 <div className="hover-zoom" style={{ position: "relative", height: "260px" }}>
@@ -304,7 +304,13 @@ export default function Home() {
                 </div>
                 <div style={{ padding: "24px" }}>
                   <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "20px", fontWeight: 400, color: "#d4d4d4", marginBottom: "6px" }}>{c.name}</h3>
-                  <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "14px", color: "#777", fontStyle: "italic" }}>{c.desc}</p>
+                  <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "14px", color: "#777", fontStyle: "italic", marginBottom: "16px" }}>{c.desc}</p>
+                  <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "8px", fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase", color: "#555", marginBottom: "10px" }}>Ingredients</div>
+                  <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "5px" }}>
+                    {c.ingredients.map((ing, j) => (
+                      <li key={j} style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "14px", color: "#888" }}>{ing}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}

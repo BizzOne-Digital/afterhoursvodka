@@ -39,7 +39,7 @@ export default function Services() {
                 <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "40px", fontWeight: 600, color: "#d4d4d4" }}>$47.99</span>
               </div>
               <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "18px", lineHeight: 1.85, color: "#666", marginBottom: "32px" }}>
-                Canada's premium black bottle vodka. Sugar cane distilled, naturally gluten-free, and crafted with glacier water from the Rocky Mountains. Perfect for restaurants, bars, events, and personal collections.
+                Canada's premium black bottle vodka. Sugar cane distilled, made with gluten-free ingredients, and crafted with glacier water from the Rocky Mountains. Perfect for restaurants, bars, events, and personal collections.
               </p>
               <div style={{ background: "#0f0f0f", border: "1px solid #1e1e1e", padding: "20px 28px", display: "inline-block", marginBottom: "32px" }}>
                 <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#666" }}>

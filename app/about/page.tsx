@@ -69,7 +69,7 @@ export default function About() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "2px" }}>
             {[
-              { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#888" strokeWidth="1"><path d="M12 2C12 2 4 9 4 14a8 8 0 0 0 16 0c0-5-8-12-8-12z"/></svg>, title: "Purity", desc: "Glacier water from Canada's Rocky Mountains, sugar cane distilled and naturally gluten-free. Nothing added, nothing removed. Pristine from source to bottle." },
+              { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#888" strokeWidth="1"><path d="M12 2C12 2 4 9 4 14a8 8 0 0 0 16 0c0-5-8-12-8-12z"/></svg>, title: "Purity", desc: "Glacier water from Canada's Rocky Mountains, sugar cane distilled and made with gluten-free ingredients. Nothing added, nothing removed. Pristine from source to bottle." },
               { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#888" strokeWidth="1"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>, title: "Patience", desc: "Our process is deliberate and unhurried. We take the time that quality demands, no shortcuts." },
               { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#888" strokeWidth="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>, title: "Excellence", desc: "From the bottle design to the final taste — every detail is a decision made in pursuit of the exceptional." },
               { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#888" strokeWidth="1"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>, title: "Canadian Pride", desc: "Built in Canada, for the world. We are proud of where we come from and the spirit we create." },
@@ -94,10 +94,10 @@ export default function About() {
             Made for Those Who<br /><em style={{ fontStyle: "italic", color: "#888" }}>Appreciate the Exceptional</em>
           </h2>
           <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "20px", lineHeight: 1.8, color: "#666", marginBottom: "24px" }}>
-            After Hours is designed for adults who appreciate premium quality and want a vodka that feels elevated without being pretentious. Professionals, entrepreneurs, and hospitality enthusiasts aged 25–45 who value craftsmanship, modern design, and supporting Canadian brands.
+            After Hours is designed for adults who appreciate premium quality and want a vodka that feels elevated without being pretentious. Professionals, entrepreneurs, and hospitality enthusiasts who value craftsmanship, modern design, and supporting Canadian brands.
           </p>
           <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "18px", lineHeight: 1.8, color: "#555", fontStyle: "italic" }}>
-            They're looking for a spirit perfect for celebrations, entertaining, or enjoying with friends — a bottle they're proud to display.
+            They're looking for a spirit perfect for celebrations, entertaining, or enjoying with friends. A bottle they're proud to display.
           </p>
           <div style={{ marginTop: "48px" }}>
             <Link href="/products" className="btn-primary">Shop the Collection</Link>

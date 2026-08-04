@@ -46,7 +46,7 @@ export default function AgeGate() {
       }}
     >
       <div style={{ position: "absolute", inset: 0, opacity: 0.35 }}>
-        <Image src="/newhero.png" alt="" fill style={{ objectFit: "cover" }} priority />
+        <Image src="/hero.png" alt="" fill style={{ objectFit: "cover" }} priority />
       </div>
       <div style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.92) 100%)" }} />
 

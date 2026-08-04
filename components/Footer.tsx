@@ -18,7 +18,7 @@ export default function Footer() {
               Northern Quality. You Can Taste and Trust.
             </p>
             <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "15px", lineHeight: 1.8, color: "#555", fontStyle: "italic" }}>
-              Canada's premium black bottle vodka. Sugar cane distilled, gluten-free, and crafted with glacier water from the Rocky Mountains.
+              Canada's premium black bottle vodka. Sugar cane distilled, made with gluten-free ingredients, and crafted with glacier water from the Rocky Mountains.
             </p>
             <div style={{ display: "flex", gap: "16px", marginTop: "24px" }}>
               {/* Instagram */}
