@@ -29,10 +29,6 @@ export default function Footer() {
               <a href="#" style={{ color: "#555", transition: "color 0.3s" }} onMouseEnter={e => e.currentTarget.style.color = "#d4d4d4"} onMouseLeave={e => e.currentTarget.style.color = "#555"}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
               </a>
-              {/* Twitter/X */}
-              <a href="#" style={{ color: "#555", transition: "color 0.3s" }} onMouseEnter={e => e.currentTarget.style.color = "#d4d4d4"} onMouseLeave={e => e.currentTarget.style.color = "#555"}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg>
-              </a>
             </div>
           </div>
 

@@ -110,14 +110,11 @@ export default function Home() {
 
               {/* Social icons */}
               <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+                <a href="https://instagram.com/afterhoursvodkas" target="_blank" rel="noreferrer" aria-label="Instagram" style={{ width: "34px", height: "34px", borderRadius: "50%", border: "1px solid #333", display: "flex", alignItems: "center", justifyContent: "center", color: "#999" }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+                </a>
                 <a href="#" aria-label="Facebook" style={{ width: "34px", height: "34px", borderRadius: "50%", border: "1px solid #333", display: "flex", alignItems: "center", justifyContent: "center", color: "#999" }}>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                </a>
-                <a href="#" aria-label="Twitter / X" style={{ width: "34px", height: "34px", borderRadius: "50%", border: "1px solid #333", display: "flex", alignItems: "center", justifyContent: "center", color: "#999" }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.803 2.293 8.365 3.294 13 2 4.518-1.294 7.837-4.845 9-9.5v-2.5C22.964 6.766 23.478 5.487 24 4c-1.002.63-2.213 1.11-3 1.5 1.121-1.265 1.478-2.487 2-4z"/></svg>
-                </a>
-                <a href="#" aria-label="Instagram" style={{ width: "34px", height: "34px", borderRadius: "50%", border: "1px solid #333", display: "flex", alignItems: "center", justifyContent: "center", color: "#999" }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
                 </a>
               </div>
             </div>
