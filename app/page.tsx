@@ -53,7 +53,7 @@ export default function Home() {
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "300px", background: "linear-gradient(to top, #000, transparent)", zIndex: 2 }} />
 
         {/* Content */}
-        <div className="hero-content" style={{ position: "relative", zIndex: 3, height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch", justifyContent: "center", maxWidth: "1400px", margin: "0 auto", padding: "clamp(110px, 16vh, 160px) 40px 0" }}>
+        <div className="hero-content" style={{ position: "relative", zIndex: 3, height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch", justifyContent: "center", maxWidth: "1400px", margin: "0 auto", padding: "max(140px, 18vh) 40px 0" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "60px", alignItems: "center", width: "100%" }}>
             {/* Left text */}
             <div style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(30px)", transition: "all 1s ease 0.3s" }}>
@@ -82,7 +82,7 @@ export default function Home() {
               </div>
 
               {/* Stats */}
-              <div style={{ display: "flex", gap: "40px", marginTop: "60px", paddingTop: "40px", borderTop: "1px solid #1a1a1a" }}>
+              <div className="hero-stats" style={{ display: "flex", gap: "40px", marginTop: "60px", paddingTop: "40px", borderTop: "1px solid #1a1a1a" }}>
                 {[
                   { num: "100%", label: "Canadian Glacier Water" },
                   { num: "Premium", label: "Black Bottle Edition" },
@@ -132,6 +132,11 @@ export default function Home() {
             .hero-side { display: none !important; }
             .desktop-hero-img { display: none !important; }
             .mobile-hero-img { display: block !important; }
+            .hero-stats { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 12px !important; }
+            .hero-stats > div { min-width: 0; }
+          }
+          @media (max-width: 420px) {
+            .hero-stats { grid-template-columns: 1fr !important; gap: 16px !important; }
           }
         `}</style>
       </section>
@@ -312,6 +317,54 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ── */}
+      <section style={{ background: "#050505", padding: "100px 40px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div className="reveal" style={{ textAlign: "center", marginBottom: "56px" }}>
+            <div className="luxury-divider" style={{ marginBottom: "24px" }}>
+              <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "9px", fontWeight: 700, letterSpacing: "0.4em", color: "#555", textTransform: "uppercase" }}>Word on the Street</span>
+            </div>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(32px, 4vw, 52px)", fontWeight: 300, color: "#d4d4d4" }}>What People Are Saying</h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1px", background: "#1a1a1a" }}>
+            {[
+              { quote: "Exceptionally smooth for the price point — our guests notice it the moment we pour it.", name: "Bar Manager", place: "Toronto, ON" },
+              { quote: "The bottle alone gets conversation started. The vodka keeps it going.", name: "Restaurant Owner", place: "Vancouver, BC" },
+              { quote: "Clean, crisp, and genuinely smooth. It's become our house pour for cocktails.", name: "Event Planner", place: "Calgary, AB" },
+            ].map((t, i) => (
+              <div key={i} className="reveal-scale hover-lift" style={{ background: "#0a0a0a", padding: "40px 32px", ["--reveal-delay" as string]: `${i * 0.12}s` }}>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1" style={{ marginBottom: "20px" }}><path d="M7 9H4a1 1 0 0 1-1-1V6a3 3 0 0 1 3-3h1v6zm10 0h-3a1 1 0 0 1-1-1V6a3 3 0 0 1 3-3h1v6z"/><path d="M4 9v3a4 4 0 0 0 4 4h1M14 9v3a4 4 0 0 0 4 4h1"/></svg>
+                <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "18px", lineHeight: 1.7, color: "#aaa", fontStyle: "italic", marginBottom: "24px" }}>{t.quote}</p>
+                <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "9px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#777" }}>{t.name}</div>
+                <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "9px", fontWeight: 500, letterSpacing: "0.1em", color: "#444", marginTop: "4px" }}>{t.place}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FOLLOW US ── */}
+      <section style={{ background: "#000", padding: "90px 40px", textAlign: "center" }}>
+        <div className="reveal" style={{ maxWidth: "600px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(26px, 3vw, 36px)", fontWeight: 300, color: "#d4d4d4", marginBottom: "16px" }}>
+            Join the <em style={{ fontStyle: "italic", color: "#b8944f" }}>After Hours</em> Community
+          </h2>
+          <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "16px", color: "#666", fontStyle: "italic", marginBottom: "28px" }}>
+            Follow along for new drops, cocktail inspiration, and behind-the-scenes moments.
+          </p>
+          <a
+            href="https://instagram.com/afterhoursvodkas"
+            target="_blank"
+            rel="noreferrer"
+            className="hover-glow"
+            style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "14px 32px", border: "1px solid #333", color: "#d4d4d4", fontFamily: "'Montserrat', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", textDecoration: "none" }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            @AfterHoursVodkas
+          </a>
         </div>
       </section>
 
