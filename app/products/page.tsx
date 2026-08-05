@@ -24,7 +24,7 @@ export default function Products() {
       {/* Product */}
       <section style={{ background: "#000", padding: "100px 40px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center", border: "1px solid #1a1a1a" }} className="product-main-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)", gap: "80px", alignItems: "center", border: "1px solid #1a1a1a" }} className="product-main-grid">
             {/* Image */}
             <div className="reveal-left hover-zoom" style={{ position: "relative", height: "640px", background: "#070707", overflow: "hidden" }}>
               <Image src="/pro.jpeg" alt="After Hours Vodka" fill style={{ objectFit: "cover" }} />
@@ -56,7 +56,7 @@ export default function Products() {
               </p>
 
               {/* Features */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "36px" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)", gap: "16px", marginBottom: "36px" }}>
                 {[
                   { icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2C12 2 4 9 4 14a8 8 0 0 0 16 0c0-5-8-12-8-12z"/></svg>, label: "Glacier Water" },
                   { icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>, label: "Canadian Made" },

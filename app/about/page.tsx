@@ -29,7 +29,7 @@ export default function About() {
       {/* Story */}
       <section style={{ background: "#000", padding: "100px 40px" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "100px", alignItems: "center" }} className="about-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)", gap: "100px", alignItems: "center" }} className="about-grid">
             <div className="reveal-left">
               <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
                 <div style={{ height: "1px", width: "40px", background: "#333" }} />

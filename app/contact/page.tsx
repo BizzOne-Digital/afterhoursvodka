@@ -56,7 +56,7 @@ export default function Contact() {
 
       {/* Main */}
       <section style={{ background: "#000", padding: "100px 40px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px" }} className="contact-grid">
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)", gap: "80px" }} className="contact-grid">
           {/* Info */}
           <div className="reveal-left">
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
@@ -106,7 +106,7 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)", gap: "16px" }}>
                   <div>
                     <label style={labelStyle}>Full Name</label>
                     <input required style={inputStyle} type="text" placeholder="Your name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} onFocus={e => e.target.style.borderColor = "#333"} onBlur={e => e.target.style.borderColor = "#1e1e1e"} />

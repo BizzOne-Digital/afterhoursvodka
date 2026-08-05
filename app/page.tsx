@@ -53,8 +53,8 @@ export default function Home() {
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "300px", background: "linear-gradient(to top, #000, transparent)", zIndex: 2 }} />
 
         {/* Content */}
-        <div className="hero-content" style={{ position: "relative", zIndex: 3, height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch", justifyContent: "center", maxWidth: "1400px", margin: "0 auto", padding: "max(140px, 18vh) 40px 0" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "60px", alignItems: "center", width: "100%" }}>
+        <div className="hero-content" style={{ position: "relative", zIndex: 3, minHeight: "100%", display: "flex", flexDirection: "column", alignItems: "stretch", justifyContent: "flex-start", maxWidth: "1400px", margin: "0 auto", padding: "140px 40px 60px" }}>
+          <div className="hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "60px", alignItems: "center", width: "100%" }}>
             {/* Left text */}
             <div style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(30px)", transition: "all 1s ease 0.3s" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
@@ -128,8 +128,11 @@ export default function Home() {
         </div>
 
         <style>{`
-          @media (max-width: 768px) {
+          @media (max-width: 900px) {
             .hero-side { display: none !important; }
+            .hero-grid { grid-template-columns: 1fr !important; }
+          }
+          @media (max-width: 768px) {
             .desktop-hero-img { display: none !important; }
             .mobile-hero-img { display: block !important; }
             .hero-stats { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 12px !important; }
@@ -156,7 +159,7 @@ export default function Home() {
 
       {/* ── CRAFT SECTION ── */}
       <section style={{ background: "#0a0a0a" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "0.9fr 1fr", alignItems: "stretch" }} className="craft-grid">
+        <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 0.9fr) minmax(0, 1fr)", alignItems: "stretch" }} className="craft-grid">
           {/* Image - full bleed, 0px from edges */}
           <div className="craft-image reveal-left" style={{ position: "relative", minHeight: "560px" }}>
             <Image
@@ -175,7 +178,7 @@ export default function Home() {
             </h2>
 
             {/* Feature grid */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px", marginBottom: "40px" }} className="craft-feature-grid">
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: "20px", marginBottom: "40px" }} className="craft-feature-grid">
               {[
                 { icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.2"><path d="M12 2C12 2 4 9 4 14a8 8 0 0 0 16 0c0-5-8-12-8-12z"/></svg>, title: "Premium Ingredients", desc: "Made from the finest sugar cane." },
                 { icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#b8944f" strokeWidth="1.2"><path d="M12 2l9 18H3z"/><path d="M8 14l4-8 4 8"/></svg>, title: "Glacier Filtered", desc: "Infused with pure Canadian glacier water." },
@@ -199,7 +202,7 @@ export default function Home() {
           @media (max-width: 768px) {
             .craft-grid { grid-template-columns: 1fr !important; }
             .craft-image { min-height: 400px !important; }
-            .craft-feature-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .craft-feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
             .craft-feature-grid > div { border-left: none !important; padding-left: 0 !important; }
           }
         `}</style>
@@ -221,7 +224,7 @@ export default function Home() {
           </div>
 
           {/* Product card */}
-          <div className="product-card-grid reveal-scale hover-lift" style={{ maxWidth: "900px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0", border: "1px solid #1a1a1a" }}>
+          <div className="product-card-grid reveal-scale hover-lift" style={{ maxWidth: "900px", margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)", gap: "0", border: "1px solid #1a1a1a" }}>
             <div style={{ position: "relative", minHeight: "500px", height: "100%", background: "#080808" }}>
               <Image
                 src="/pro.jpeg"
@@ -381,7 +384,6 @@ export default function Home() {
             A premium Canadian vodka that's as unforgettable on the table as it is in the glass.
           </p>
           <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/products" className="btn-primary">Shop Now</Link>
             <Link href="/contact" className="btn-ghost">Contact for Bulk Pricing</Link>
           </div>
         </div>
