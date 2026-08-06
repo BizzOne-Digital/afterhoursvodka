@@ -1,10 +1,9 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const heroRef = useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -12,24 +11,12 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Parallax
-  useEffect(() => {
-    const handleScroll = () => {
-      if (heroRef.current) {
-        const y = window.scrollY * 0.4;
-        heroRef.current.style.transform = `translateY(${y}px)`;
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <>
       {/* ── HERO ── */}
-      <section style={{ position: "relative", height: "100vh", minHeight: "700px", overflow: "hidden", background: "#000" }}>
-        {/* BG image with parallax */}
-        <div ref={heroRef} style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+      <section style={{ position: "relative", minHeight: "100vh", overflow: "hidden", background: "#000" }}>
+        {/* BG image */}
+        <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
           <Image
             src="/hero.png"
             alt="Mountain glacier backdrop"
@@ -53,7 +40,7 @@ export default function Home() {
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "300px", background: "linear-gradient(to top, #000, transparent)", zIndex: 2 }} />
 
         {/* Content */}
-        <div className="hero-content" style={{ position: "relative", zIndex: 3, minHeight: "100%", display: "flex", flexDirection: "column", alignItems: "stretch", justifyContent: "flex-start", maxWidth: "1400px", margin: "0 auto", padding: "140px 40px 60px" }}>
+        <div className="hero-content" style={{ position: "relative", zIndex: 3, minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "stretch", justifyContent: "flex-start", maxWidth: "1400px", margin: "0 auto", padding: "140px 40px 60px" }}>
           <div className="hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "60px", alignItems: "center", width: "100%" }}>
             {/* Left text */}
             <div style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(30px)", transition: "all 1s ease 0.3s" }}>
@@ -122,7 +109,7 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div style={{ position: "absolute", bottom: "32px", left: "50%", transform: "translateX(-50%)", zIndex: 3, display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
+        <div className="scroll-indicator" style={{ position: "absolute", bottom: "32px", left: "50%", transform: "translateX(-50%)", zIndex: 3, display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
           <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "8px", fontWeight: 600, letterSpacing: "0.3em", color: "#444", textTransform: "uppercase" }}>Scroll</span>
           <div style={{ width: "1px", height: "48px", background: "linear-gradient(to bottom, #444, transparent)", animation: "fadeIn 2s ease infinite" }} />
         </div>
@@ -131,6 +118,7 @@ export default function Home() {
           @media (max-width: 900px) {
             .hero-side { display: none !important; }
             .hero-grid { grid-template-columns: 1fr !important; }
+            .scroll-indicator { display: none !important; }
           }
           @media (max-width: 768px) {
             .desktop-hero-img { display: none !important; }
