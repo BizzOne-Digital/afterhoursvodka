@@ -45,7 +45,7 @@ export default function About() {
                 We believe that a truly premium spirit doesn't need to announce itself — it speaks through experience. The feel of the bottle in your hand. The clarity in the glass. The smoothness on the palate. That is After Hours.
               </p>
             </div>
-            <div className="reveal-right hover-zoom" style={{ position: "relative", height: "600px" }}>
+            <div className="reveal-right hover-zoom about-image" style={{ position: "relative", height: "600px" }}>
               <Image src="/aboutpagepic.jpg" alt="Vodka craftsmanship" fill style={{ objectFit: "cover" }} />
               <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(0,0,0,0.2), transparent)" }} />
             </div>
@@ -54,6 +54,7 @@ export default function About() {
         <style>{`
           @media (max-width: 768px) {
             .about-grid { grid-template-columns: 1fr !important; }
+            .about-image { height: auto !important; aspect-ratio: 1 / 1; }
           }
         `}</style>
       </section>
