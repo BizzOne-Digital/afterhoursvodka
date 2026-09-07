@@ -54,7 +54,7 @@ export default function About() {
         <style>{`
           @media (max-width: 768px) {
             .about-grid { grid-template-columns: 1fr !important; }
-            .about-image { height: auto !important; aspect-ratio: 1 / 1; }
+            .about-image { height: auto !important; aspect-ratio: 5 / 4; width: calc(100% + 80px) !important; margin-left: -40px; }
           }
         `}</style>
       </section>
