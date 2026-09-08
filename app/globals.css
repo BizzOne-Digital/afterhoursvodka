@@ -70,7 +70,7 @@ body {
   align-items: center;
   gap: 8px;
   padding: 14px 36px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.45);
   border: 1px solid var(--silver-bright);
   color: var(--silver-bright);
   font-family: 'Montserrat', sans-serif;
@@ -92,7 +92,7 @@ body {
   align-items: center;
   gap: 8px;
   padding: 14px 36px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.45);
   border: 1px solid var(--border);
   color: var(--silver-dim);
   font-family: 'Montserrat', sans-serif;
